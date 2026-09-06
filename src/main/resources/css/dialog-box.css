@@ -1,14 +1,14 @@
 .label {
-    -fx-background-color: #2563eb;
+    -fx-background-color: #a9d8f0;
     -fx-background-radius: 14px 14px 2px 14px;
-    -fx-text-fill: white;
+    -fx-text-fill: #173f5d;
     -fx-padding: 8px 10px;
 }
 
 .reply-label {
-    -fx-background-color: #e2e8f0;
+    -fx-background-color: #e8f5ff;
     -fx-background-radius: 14px 14px 14px 2px;
-    -fx-text-fill: #1e293b;
+    -fx-text-fill: #315a78;
 }
 
 .add-label {
