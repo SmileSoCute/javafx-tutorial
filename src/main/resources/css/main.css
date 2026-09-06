@@ -1,6 +1,6 @@
 .root {
     -fx-background-color: linear-gradient(to bottom, #f4fbff, #dcefff);
-    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-family: "Times New Roman", serif;
 }
 
 .text-field {
