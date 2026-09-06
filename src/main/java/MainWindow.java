@@ -31,6 +31,9 @@ public class MainWindow extends AnchorPane {
     /** Injects the Duke instance used to generate responses. */
     public void setDuke(Duke duke) {
         this.duke = duke;
+        dialogContainer.getChildren().add(
+                DialogBox.getDukeDialog("Hello! I'm Duke. How can I help?", dukeImage, "")
+        );
     }
 
     /** Adds the user's message and Duke's response to the dialog container. */
@@ -38,9 +41,10 @@ public class MainWindow extends AnchorPane {
     private void handleUserInput() {
         String input = userInput.getText();
         String response = duke.getResponse(input);
+        String commandType = duke.getCommandType();
         dialogContainer.getChildren().addAll(
                 DialogBox.getUserDialog(input, userImage),
-                DialogBox.getDukeDialog(response, dukeImage)
+                DialogBox.getDukeDialog(response, dukeImage, commandType)
         );
         userInput.clear();
     }

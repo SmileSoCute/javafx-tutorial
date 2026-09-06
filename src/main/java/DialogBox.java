@@ -40,13 +40,30 @@ public class DialogBox extends HBox {
         getChildren().setAll(tmp);
     }
 
+    private void changeDialogStyle(String commandType) {
+        switch (commandType) {
+        case "add":
+            dialog.getStyleClass().add("add-label");
+            break;
+        case "mark":
+            dialog.getStyleClass().add("marked-label");
+            break;
+        case "delete":
+            dialog.getStyleClass().add("delete-label");
+            break;
+        default:
+            break;
+        }
+    }
+
     public static DialogBox getUserDialog(String text, Image image) {
         return new DialogBox(text, image);
     }
 
-    public static DialogBox getDukeDialog(String text, Image image) {
+    public static DialogBox getDukeDialog(String text, Image image, String commandType) {
         var db = new DialogBox(text, image);
         db.flip();
+        db.changeDialogStyle(commandType);
         return db;
     }
 }
